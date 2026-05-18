@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>Referência didática - Facebook Login Web</title>
+</head>
+<body>
+<h1>Referência didática: Facebook Login Web</h1>
+<p>
+    Este arquivo é apenas um complemento didático inspirado no fluxo Web do Facebook Login.
+    O aplicativo Android principal usa o Facebook SDK nativo para Android.
+</p>
+<script>
+    // Exemplo conceitual: inicialização do SDK JavaScript em páginas Web.
+    // Em uma aplicação real, substitua YOUR_APP_ID e configure os domínios autorizados.
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : 'YOUR_APP_ID',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v23.0'
+        });
+
+        FB.getLoginStatus(function(response) {
+            console.log('Status atual do login:', response);
+        });
+    };
+
+    function loginWithFacebookWeb() {
+        FB.login(function(response) {
+            if (response.authResponse) {
+                FB.api('/me', { fields: 'id,name,email' }, function(profile) {
+                    console.log('Perfil recebido:', profile);
+                });
+            }
+        }, { scope: 'public_profile,email' });
+    }
+</script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js"></script>
+<button onclick="loginWithFacebookWeb()">Entrar com Facebook na Web</button>
+</body>
+</html>

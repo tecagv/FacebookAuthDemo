@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Facebook Auth Demo</string>
+
+    <!--
+        SUBSTITUA ESTES VALORES PELOS DADOS DO SEU APP NO META FOR DEVELOPERS.
+        Caminho: https://developers.facebook.com/ > My Apps > seu app > Settings > Basic.
+    -->
+    <string name="facebook_app_id">SEU_FACEBOOK_APP_ID</string>
+    <string name="facebook_client_token">SEU_FACEBOOK_CLIENT_TOKEN</string>
+
+    <!-- O SDK usa esse esquema para retornar do fluxo de autenticação ao aplicativo. -->
+    <string name="fb_login_protocol_scheme">fbSEU_FACEBOOK_APP_ID</string>
+</resources>
