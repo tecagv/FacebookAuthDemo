@@ -2,6 +2,10 @@
 
 Projeto didático simples para demonstrar autenticação por **Facebook Login** em aplicativo Android nativo com Kotlin.
 
+# Prof. Dr. Alexandre Garcez Vieira
+# Centro Universitário Faveni - UniFAVENI
+
+
 ---
 
 ## 🎯 O que o exemplo demonstra
